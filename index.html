@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Win Rate Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <div class="container">
+    <h1> Win Rate Calculator</h1>
+
+    <!-- Game Selection -->
+    <label>Game</label>
+    <select id="game">
+      <option value="MLBB">Mobile Legends</option>
+      <option value="HoK">Honor of Kings</option>
+    </select>
+
+    <!-- Hero Name -->
+    <label>Hero Name</label>
+    <input type="text" id="hero" placeholder="e.g. Fanny, Gusion" />
+
+    <!-- Stats -->
+    <label>Wins</label>
+    <input type="number" id="wins" />
+
+    <label>Total Matches</label>
+    <input type="number" id="matches" />
+
+    <button onclick="calculateWinRate()">Calculate</button>
+
+    <!-- Result -->
+    <p id="result"></p>
+
+    <!-- Theme Customization -->
+    <h2>🎨 Customize Theme</h2>
+    <label>Background Color</label>
+    <input type="color" id="bgColor" />
+
+    <label>Card Color</label>
+    <input type="color" id="cardColor" />
+
+    <button onclick="applyTheme()">Apply Theme</button>
+
+    <!-- History -->
+    <h2>📊 History</h2>
+    <ul id="history"></ul>
+
+    <button onclick="clearHistory()">Clear History</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
